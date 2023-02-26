@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent _navMeshAgent;
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetMouseButtonUp(0))

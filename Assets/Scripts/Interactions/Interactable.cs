@@ -27,7 +27,7 @@ namespace Interactions
             _interactingEntity = null;
         }
 
-        public void Interact()
+        public virtual void Interact()
         {
             print("[Interactable] Interact");
             _onInteract.Invoke();

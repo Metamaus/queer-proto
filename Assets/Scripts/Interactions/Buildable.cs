@@ -8,7 +8,7 @@ namespace Interactions
         [SerializeField] private GameObject _initialStructure;
         [SerializeField] private GameObject _finalStructure;
 
-        public bool Built { get; private set; }
+        public bool Built { get; private set; } // todo: keep built state when changing scenes
         
         private void Awake()
         {

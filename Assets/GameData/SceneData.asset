@@ -17,3 +17,7 @@ MonoBehaviour:
     Path: Gym1
   - sceneEnum: 3
     Path: Gym2
+  - sceneEnum: 1
+    Path: Gym1
+  - sceneEnum: 0
+    Path: MainMenu

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using GlobalData;
 using UnityEngine;
 
 namespace Interactions
@@ -7,12 +7,13 @@ namespace Interactions
     {
         [SerializeField] private GameObject _initialStructure;
         [SerializeField] private GameObject _finalStructure;
+        [SerializeField] private string _id;
 
         public bool Built { get; private set; } // todo: keep built state when changing scenes
         
         private void Awake()
         {
-            Built = false;
+            Built = GameMemory.Instance.IsBuilt(_id);
             UpdateStructures();
         }
 
@@ -21,6 +22,7 @@ namespace Interactions
             if(Built)
                 return;
             Built = true;
+            GameMemory.Instance.Build(_id);
             UpdateStructures();
         }
 

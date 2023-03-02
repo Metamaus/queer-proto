@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GlobalData;
 using SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,10 @@ public class MainMenu : MonoBehaviour
     
     public void PlayGame()
     {
+        if (GameMemory.Instance)
+        {
+            GameMemory.Instance.ResetMemory();
+        }
         SceneManager.LoadSceneAsync(_sceneData.GetScenePath(Scenes.InitialScene));
     }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 948702609744558660}
   - component: {fileID: 948702609744558659}
   - component: {fileID: 948702609744558658}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SceneChangeZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

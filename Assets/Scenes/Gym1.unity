@@ -4361,6 +4361,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Talker
       objectReference: {fileID: 0}
+    - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
+      propertyPath: _dialogues.Array.data[1].dialogueCondition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
+      propertyPath: _dialogues.Array.data[1].talkerConditionID
+      value: testTalker2
+      objectReference: {fileID: 0}
     - target: {fileID: 7182229919750216398, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}
       propertyPath: m_RootOrder

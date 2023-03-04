@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TestDialogueDataBuild
   m_EditorClassIdentifier: 
   lines:
-  - "Si je peux t'aider \xE0 r\xE9parer \xE7a ?"
-  - "Bein s\xFBr !"
+  - "Oh tu viens m'aider \xE0 r\xE9parer \xE7a ?"
+  - Super !

@@ -12,11 +12,13 @@ namespace Dialogues
     {
         public DialogueData data;
         public Buildable building;
+        public string talkerConditionID;
+        public int dialogueCondition;
     }
     
     public class Talker : Interactable
     {
-        [SerializeField] private List<DialogueActions> _dialogues;
+        [SerializeField] private List<DialogueActions> _dialogues; // could work the other way around, talkers are represented by enums and given their lines ?
         [SerializeField] private TextMeshProUGUI _dialogueTMP;
         [SerializeField] private GameObject _bubbleCanvas;
         [SerializeField] private string _talkerId;
@@ -38,12 +40,16 @@ namespace Dialogues
         public override bool Interact()
         {
             base.Interact();
-            if (_currentDialogue >= _dialogues.Count)
+            if (_currentDialogue >= _dialogues.Count ||
+                !GameMemory.Instance.TalkerMemories.IsDialogueFinished(
+                    _dialogues[_currentDialogue].talkerConditionID, 
+                    _dialogues[_currentDialogue].dialogueCondition))
             {
+                // todo: play little sound and animation
                 _bubbleCanvas.SetActive(false);
                 return true;
             }
-            if (_currentLine >= _dialogues[_currentDialogue].data.lines.Count) // todo: add a default answer ?
+            if (_currentLine >= _dialogues[_currentDialogue].data.lines.Count)
             {
                 _dialogues[_currentDialogue].building?.Build();
                 _bubbleCanvas.SetActive(false);

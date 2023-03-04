@@ -5,7 +5,7 @@ using UnityEngine.PlayerLoop;
 
 namespace GlobalData
 {
-    class TalkerMemories
+    public class TalkerMemories
     {
         private List<string> TalkerIds = new ();
         private List<int> CurrentDialogues = new ();
@@ -41,12 +41,30 @@ namespace GlobalData
             TalkerIds = new();
             CurrentDialogues = new();
         }
+
+        public bool IsDialogueFinished(string talkerId, int dialogue)
+        {
+            if (talkerId.Equals(String.Empty))
+            {
+                return true;
+            }
+            
+            for (int i = 0; i < TalkerIds.Count; i++)
+            {
+                if (talkerId.Equals(TalkerIds[i]))
+                {
+                    return CurrentDialogues[i] >= dialogue;
+                }
+            }
+
+            return false;
+        }
     }
     public class GameMemory : MonoBehaviour
     {
         public static GameMemory Instance;
         private List<string> BuiltConstructionIds = new ();
-        private readonly TalkerMemories _talkerMemories = new ();
+        public readonly TalkerMemories TalkerMemories = new ();
 
         private void Awake()
         {
@@ -60,12 +78,12 @@ namespace GlobalData
 
         public int GetTalkerMemory(string talkerId)
         {
-            return _talkerMemories.GetMemory(talkerId);
+            return TalkerMemories.GetMemory(talkerId);
         }
 
         public void UpdateTalker(string talkerId, int newDialogue)
         {
-            _talkerMemories.UpdateDialogue(talkerId, newDialogue);
+            TalkerMemories.UpdateDialogue(talkerId, newDialogue);
         }
 
         public bool IsBuilt(string id)
@@ -81,7 +99,7 @@ namespace GlobalData
         public void ResetMemory()
         {
             BuiltConstructionIds = new ();
-            _talkerMemories.Reset();
+            TalkerMemories.Reset();
         }
     }
 }

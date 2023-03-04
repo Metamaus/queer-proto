@@ -7,9 +7,16 @@ using UnityEngine;
 
 namespace Dialogues
 {
+    [Serializable]
+    struct DialogueActions
+    {
+        public DialogueData data;
+        public Buildable building;
+    }
+    
     public class Talker : Interactable
     {
-        [SerializeField] private List<DialogueData> _dialogues;
+        [SerializeField] private List<DialogueActions> _dialogues;
         [SerializeField] private TextMeshProUGUI _dialogueTMP;
         [SerializeField] private GameObject _bubbleCanvas;
         [SerializeField] private string _talkerId;
@@ -36,8 +43,9 @@ namespace Dialogues
                 _bubbleCanvas.SetActive(false);
                 return true;
             }
-            if (_currentLine >= _dialogues[_currentDialogue].lines.Count) // todo: add a default answer ?
+            if (_currentLine >= _dialogues[_currentDialogue].data.lines.Count) // todo: add a default answer ?
             {
+                _dialogues[_currentDialogue].building?.Build();
                 _bubbleCanvas.SetActive(false);
                 _currentDialogue++;
                 GameMemory.Instance.UpdateTalker(_talkerId, _currentDialogue); // use a setter ?
@@ -47,7 +55,7 @@ namespace Dialogues
             
             // start dialogue
             _bubbleCanvas.SetActive(true);
-            _dialogueTMP.text = _dialogues[_currentDialogue].lines[_currentLine];
+            _dialogueTMP.text = _dialogues[_currentDialogue].data.lines[_currentLine];
             _currentLine++;
             return false;
         }

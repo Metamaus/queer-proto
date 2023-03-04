@@ -6,10 +6,11 @@ namespace Interactions
     {
         [SerializeField] private Buildable _construction;
 
-        public override void Interact()
+        public override bool Interact()
         {
             base.Interact();
             _construction.Build();
+            return true;
         }
     }
 }

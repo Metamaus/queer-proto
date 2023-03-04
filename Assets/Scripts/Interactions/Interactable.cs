@@ -27,18 +27,23 @@ namespace Interactions
             _interactingEntity = null;
         }
 
-        public virtual void Interact()
+        /// <summary>
+        /// Generic interaction method
+        /// </summary>
+        /// <returns>True if the interaction is finished</returns>
+        public virtual bool Interact()
         {
             print("[Interactable] Interact");
-            _onInteract.Invoke();
+            _onInteract?.Invoke();
             _onInteract = null; // is this okay ?
             UnFocus();
+            return true;
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if(other.GetComponentInParent<PlayerController>() == _interactingEntity) // todo(interactions): identify entity better
-                Interact();
+                _interactingEntity.InteractWith(this);
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using GlobalData;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class InitScene : MonoBehaviour
     [SerializeField] private GameObject _playerPrefab;
     [SerializeField] private GameObject _uiPrefab;
     [SerializeField] private Transform _playerStartPosition; // todo(change scene): change initial position depending on the previous position
+    [SerializeField] private List<ChangeScene> _pathsToOtherScenes;
 
     private void Awake() // Todo: manage these instances with don't destroy on load
     {
@@ -14,14 +16,27 @@ public class InitScene : MonoBehaviour
         {
             GameObject memory = Instantiate(_memoryPrefab, Vector3.zero, Quaternion.identity);
             DontDestroyOnLoad(memory);
-        } 
+        }
+
+        Vector3 playerPosition = _playerStartPosition.position;
+        Quaternion playerRotation = _playerStartPosition.rotation;
+        foreach (var path in _pathsToOtherScenes)
+        {
+            if (path.TargetSceneName.Equals(GameMemory.Instance.PreviousScene))
+            {
+                playerPosition = path.InitialPosition.position;
+                playerRotation = path.InitialPosition.rotation;
+                break;
+            }
+        }
+        Instantiate(_playerPrefab, playerPosition, playerRotation);
         
-        GameObject playerObject = Instantiate(_playerPrefab, _playerStartPosition.position, Quaternion.identity);
         GameObject uiObject = Instantiate(_uiPrefab, Vector3.zero, Quaternion.identity);
         var canvases = uiObject.GetComponentsInChildren<Canvas>();
         foreach (var canvas in canvases) // dirty ?
         {
             canvas.worldCamera = Camera.main;
         }
+
     }
 }

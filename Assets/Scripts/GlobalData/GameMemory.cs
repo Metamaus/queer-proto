@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 
 namespace GlobalData
 {
@@ -65,6 +66,8 @@ namespace GlobalData
         public static GameMemory Instance;
         private List<string> BuiltConstructionIds = new ();
         public readonly TalkerMemories TalkerMemories = new ();
+        
+        public string PreviousScene { get; private set; }
 
         private void Awake()
         {
@@ -72,7 +75,8 @@ namespace GlobalData
             {
                 Destroy(this);
             }
-
+            
+            PreviousScene = string.Empty;
             Instance = this;
         }
 
@@ -100,6 +104,11 @@ namespace GlobalData
         {
             BuiltConstructionIds = new ();
             TalkerMemories.Reset();
+        }
+
+        public void ChangeScene()
+        {
+            PreviousScene = SceneManager.GetActiveScene().name;
         }
     }
 }

@@ -12,7 +12,11 @@ namespace SceneManagement
         InitialScene,
         Gym1,
         Gym2,
-        TowerWhereabouts
+        TowerWhereabouts,
+        QueerCenter,
+        BuildingSite,
+        MagicTower,
+        Forest
     }
     [CreateAssetMenu(fileName = "SceneData", menuName = "ScriptableObjects/SceneData", order = 1)]
     public class SceneData : ScriptableObject

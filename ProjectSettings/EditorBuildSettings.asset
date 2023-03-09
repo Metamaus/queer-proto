@@ -20,4 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TowerWhereabouts.unity
     guid: 630a4d5a6af2cda4281e4cfc369d3bcd
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 121aef3d29b3520489230323e46218c2
+  - enabled: 1
+    path: Assets/Scenes/MagicTower.unity
+    guid: 57e1169dc23542342871f787ef03bb0a
+  - enabled: 1
+    path: Assets/Scenes/QueerCenter.unity
+    guid: ce22d409a7dca19448b611d71da8eba2
+  - enabled: 1
+    path: Assets/Scenes/BuildingSite.unity
+    guid: 301ea369ec2af3042b0f989b608ce203
   m_configObjects: {}

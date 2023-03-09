@@ -23,3 +23,11 @@ MonoBehaviour:
     Path: MainMenu
   - sceneEnum: 4
     Path: TowerWhereabouts
+  - sceneEnum: 5
+    Path: QueerCenter
+  - sceneEnum: 6
+    Path: BuildingSite
+  - sceneEnum: 7
+    Path: MagicTower
+  - sceneEnum: 8
+    Path: Forest

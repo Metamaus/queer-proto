@@ -435,7 +435,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-755942
+  m_Name: pb_Mesh-401098
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -836,7 +836,7 @@ PrefabInstance:
     - target: {fileID: 7182229919750216394, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}
       propertyPath: m_Name
-      value: Talker
+      value: TalkerMichel
       objectReference: {fileID: 0}
     - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}
@@ -919,6 +919,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182229920479559513, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182229920479559513, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7182229920560208779, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}

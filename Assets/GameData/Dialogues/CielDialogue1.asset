@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d4adf5f7214f8b9a6a4ef004f72d27, type: 3}
+  m_Name: CielDialogue1
+  m_EditorClassIdentifier: 
+  lines:
+  - Oh ! Salut !
+  - "D\xE9sol\xE9\xB7e, je sais plus o\xF9 donner de la t\xEAte en ce moment. Mais
+    t'inqui\xE8tes pas, m\xEAme si on a pas beaucoup de place on va te trouver quelque
+    chose."
+  - "Et si tu t'ennuies h\xE9site pas \xE0 aller voir au chantier si il y a besoin
+    d'aide."

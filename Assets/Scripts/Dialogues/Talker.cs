@@ -14,6 +14,7 @@ namespace Dialogues
         public Buildable building;
         public string talkerConditionID;
         public int dialogueCondition;
+        public bool flowerNeeded;
     }
     
     public class Talker : Interactable
@@ -43,7 +44,8 @@ namespace Dialogues
             if (_currentDialogue >= _dialogues.Count ||
                 !GameMemory.Instance.TalkerMemories.IsDialogueFinished(
                     _dialogues[_currentDialogue].talkerConditionID, 
-                    _dialogues[_currentDialogue].dialogueCondition))
+                    _dialogues[_currentDialogue].dialogueCondition) ||
+                _dialogues[_currentDialogue].flowerNeeded && !GameMemory.Instance.FoundFlower)
             {
                 // todo: play little sound and animation
                 _bubbleCanvas.SetActive(false);

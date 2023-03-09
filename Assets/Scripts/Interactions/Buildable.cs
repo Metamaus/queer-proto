@@ -1,5 +1,6 @@
 ﻿using GlobalData;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Interactions
 {
@@ -15,6 +16,7 @@ namespace Interactions
         {
             Built = GameMemory.Instance.IsBuilt(_id);
             UpdateStructures();
+            //NavMeshBuilder.UpdateNavMeshData(); // todo: update navigation ?
         }
 
         public void Build()

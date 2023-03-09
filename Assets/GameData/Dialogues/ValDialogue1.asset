@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d4adf5f7214f8b9a6a4ef004f72d27, type: 3}
+  m_Name: ValDialogue1
+  m_EditorClassIdentifier: 
+  lines:
+  - "Hey ! Une nouvelle t\xEAte !"
+  - "Oh je vois ! Eh bien comme Ciel a d\xFB te dire, on a pas assez de place pour
+    le monde qui habite dans le coin. Du coup on est en train de se construire un
+    chez nous !"
+  - "Mais on avance tr\xE8s lentement. J'ai h\xE2te que Michel termine son sort pour
+    acc\xE9l\xE9rer tout \xE7a. H\xE9site pas \xE0 passer la voir vers la forge si
+    t'as le temps. "

@@ -33,7 +33,6 @@ namespace Interactions
         /// <returns>True if the interaction is finished</returns>
         public virtual bool Interact()
         {
-            print("[Interactable] Interact");
             _onInteract?.Invoke();
             _onInteract = null; // is this okay ?
             UnFocus();

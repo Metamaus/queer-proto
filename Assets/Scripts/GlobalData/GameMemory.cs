@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 
 namespace GlobalData
@@ -9,7 +8,7 @@ namespace GlobalData
     public class TalkerMemories
     {
         private List<string> TalkerIds = new ();
-        private List<int> CurrentDialogues = new ();
+        private List<int> CurrentDialogues = new();
 
         public void UpdateDialogue(string talkerId, int newDialogue)
         {
@@ -54,7 +53,7 @@ namespace GlobalData
             {
                 if (talkerId.Equals(TalkerIds[i]))
                 {
-                    return CurrentDialogues[i] >= dialogue;
+                    return CurrentDialogues[i] > dialogue;
                 }
             }
 
@@ -66,6 +65,8 @@ namespace GlobalData
         public static GameMemory Instance;
         private List<string> BuiltConstructionIds = new ();
         public readonly TalkerMemories TalkerMemories = new ();
+        
+        public bool FoundFlower = false;
         
         public string PreviousScene { get; private set; }
 

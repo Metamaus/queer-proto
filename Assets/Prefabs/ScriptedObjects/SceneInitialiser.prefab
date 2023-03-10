@@ -78,8 +78,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _memoryPrefab: {fileID: 3492404402650358429, guid: e5a774b3e3ee54348a3b1e5f4244af83,
     type: 3}
+  _soundPrefab: {fileID: 8503477745294324510, guid: 60f9cb08617dbe942b99f7d9085e167a,
+    type: 3}
   _playerPrefab: {fileID: 3012900062635933792, guid: 7fcaefb28404325429c522f00dfe1f7f,
     type: 3}
   _uiPrefab: {fileID: 6706686475561155919, guid: 8e3048eb3a8e16b4aa68ad9e395fb9eb,
     type: 3}
   _playerStartPosition: {fileID: 6320346971994853936}
+  _pathsToOtherScenes: []

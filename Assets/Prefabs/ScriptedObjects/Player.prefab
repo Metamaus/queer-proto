@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 3012900062635933801}
+  _navigateClip: {fileID: 8300000, guid: 317fdee27c096ef468d3d0187e27390e, type: 3}
 --- !u!1 &5258013587317049148
 GameObject:
   m_ObjectHideFlags: 0

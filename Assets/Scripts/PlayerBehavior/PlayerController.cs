@@ -1,14 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using DefaultNamespace;
 using Interactions;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent _navMeshAgent;
+    [SerializeField] private AudioClip _navigateClip;
 
     private Interactable _currentInteractable;
 
@@ -31,11 +30,10 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
 
             // Todo (navigation): ignore obstacles when clicking ?
-            if (Physics.Raycast(ray, out hit))
+            if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out hit))
             {
                 if (hit.collider.CompareTag("Walkable"))
                 {
-                    _navMeshAgent.isStopped = false; // todo(movement): block player movement better
                     _navMeshAgent.destination = hit.point;
                 }
                 else if (hit.collider.CompareTag("Interactable"))
@@ -54,6 +52,12 @@ public class PlayerController : MonoBehaviour
                         }
                     }
                 }
+                else
+                {
+                    return;
+                }
+                
+                SoundManager.Instance.PlayEffectSound(_navigateClip);
             }
         }
     }

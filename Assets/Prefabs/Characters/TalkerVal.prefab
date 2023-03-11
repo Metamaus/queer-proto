@@ -455,6 +455,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}
+      propertyPath: _dialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
       propertyPath: <TalkerId>k__BackingField
       value: Val
       objectReference: {fileID: 0}
@@ -469,6 +474,12 @@ PrefabInstance:
       propertyPath: _dialogues.Array.data[1].data
       value: 
       objectReference: {fileID: 11400000, guid: 2621a9b27fd768641bf1930819c9ba5b,
+        type: 2}
+    - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
+      propertyPath: _dialogues.Array.data[2].data
+      value: 
+      objectReference: {fileID: 11400000, guid: e0de87bf8e057c947b2f6db68716c498,
         type: 2}
     - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}
@@ -489,6 +500,16 @@ PrefabInstance:
         type: 3}
       propertyPath: _dialogues.Array.data[1].talkerConditionID
       value: Evan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
+      propertyPath: _dialogues.Array.data[2].dialogueCondition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
+      propertyPath: _dialogues.Array.data[2].talkerConditionID
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7182229919750216398, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}

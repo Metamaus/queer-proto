@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private AudioClip _menuMusic;
     [SerializeField] private AudioClip _gameMusic;
     [SerializeField] private GameObject _soundManagerPrefab;
+    [SerializeField] private GameObject _tutoObject;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class MainMenu : MonoBehaviour
             GameObject soundManager = Instantiate(_soundManagerPrefab, Vector3.zero, Quaternion.identity);
             DontDestroyOnLoad(soundManager);
         }
+        DisplayTutorial(false);
     }
 
     private void Start()
@@ -36,6 +38,11 @@ public class MainMenu : MonoBehaviour
         }
         SoundManager.Instance.StartMusic(_gameMusic);
         SceneManager.LoadSceneAsync(_sceneData.GetScenePath(Scenes.InitialScene));
+    }
+
+    public void DisplayTutorial(bool display)
+    {
+        _tutoObject.SetActive(display);
     }
 
     public void Quit()

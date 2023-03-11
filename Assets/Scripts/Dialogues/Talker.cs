@@ -23,9 +23,12 @@ namespace Dialogues
         [SerializeField] private TextMeshProUGUI _dialogueTMP;
         [SerializeField] private GameObject _bubbleCanvas;
         [SerializeField] private string _talkerId;
+        [SerializeField] private Animator _pnjAnimator;
+        [SerializeField] private bool _isFriendly = true;
 
         private int _currentLine;
         private int _currentDialogue;
+        private static readonly int Talk = Animator.StringToHash("Talk");
 
         private void Awake()
         {
@@ -41,6 +44,11 @@ namespace Dialogues
         public override bool Interact()
         {
             base.Interact();
+            if (_isFriendly && _currentLine == 0)
+            {
+                _pnjAnimator.SetTrigger(Talk);
+            }
+            
             if (_currentDialogue >= _dialogues.Count ||
                 !GameMemory.Instance.TalkerMemories.IsDialogueFinished(
                     _dialogues[_currentDialogue].talkerConditionID, 

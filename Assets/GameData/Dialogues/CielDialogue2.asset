@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CielDialogue2
   m_EditorClassIdentifier: 
   lines:
-  - "Le sortil\xE8ge est pr\xEAt ? Incroyable ! Je range une ou deux affaires et
-    on se retrouve sur place !"
+  - "Le sortil\xE8ge est pr\xEAt ? Incroyable !"
+  - Je range une ou deux affaires et on se retrouve sur place !
   - Et si tu passes voir Evan, dit lui que la surveillance de la Tour n'est pas une
     excuse pour ne pas venir !

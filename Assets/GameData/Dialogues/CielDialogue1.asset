@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - Oh ! Salut !
-  - "D\xE9sol\xE9\xB7e, je sais plus o\xF9 donner de la t\xEAte en ce moment. Mais
-    t'inqui\xE8tes pas, m\xEAme si on a pas beaucoup de place on va te trouver quelque
-    chose."
+  - "D\xE9sol\xE9\xB7e, je sais plus o\xF9 donner de la t\xEAte en ce moment."
+  - "Mais t'inqui\xE8tes pas, m\xEAme si on a pas beaucoup de place on va te trouver
+    quelque chose."
   - "Et si tu t'ennuies h\xE9site pas \xE0 aller voir au chantier si il y a besoin
     d'aide."

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - Bonjour. Que puis-je faire pour toi ?
-  - "Oh je vois ! Eh bien si tu est pr\xEAt \xE0 prendre un peu de risques, j'aimerais
+  - "Oh je vois ! Eh bien si tu est te sens de prendre un peu de risques, j'aimerais
     que tu ailles me chercher une plante dans la for\xEAt derri\xE8re le site de
     construction."
-  - "Tu la reconna\xEEtra facilement, elle brille d'un joli rose. Si tu n'arrives
-    pas \xE0 la ramasser surtout n'insiste pas !"
+  - "Tu la reconna\xEEtra facilement, elle brille. Si tu n'arrives pas \xE0 la ramasser
+    surtout n'insiste pas !"

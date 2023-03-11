@@ -21,6 +21,7 @@ namespace Dialogues
     {
         [SerializeField] private List<DialogueActions> _dialogues; // could work the other way around, talkers are represented by enums and given their lines ?
         [SerializeField] private TextMeshProUGUI _dialogueTMP;
+        [SerializeField] private TextMeshProUGUI _nameTMP;
         [SerializeField] private GameObject _bubbleCanvas;
         [field: SerializeField] public string TalkerId { get; private set; }
         [SerializeField] private Animator _pnjAnimator;
@@ -36,6 +37,7 @@ namespace Dialogues
         {
             _currentLine = 0;
             _bubbleCanvas.SetActive(false);
+            _nameTMP.text = TalkerId;
         }
 
         private void Start()

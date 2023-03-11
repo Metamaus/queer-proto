@@ -15,8 +15,8 @@ MonoBehaviour:
   lines:
   - "Hey ! Une nouvelle t\xEAte !"
   - "Oh je vois ! Eh bien comme Ciel a d\xFB te dire, on a pas assez de place pour
-    le monde qui habite dans le coin. Du coup on est en train de se construire un
-    chez nous !"
+    le monde qui habite dans le coin."
+  - Du coup on est en train de se construire un chez nous !
   - "Mais on avance tr\xE8s lentement. J'ai h\xE2te que Michel termine son sort pour
-    acc\xE9l\xE9rer tout \xE7a. H\xE9site pas \xE0 passer la voir vers la forge si
-    t'as le temps. "
+    acc\xE9l\xE9rer tout \xE7a."
+  - "H\xE9site pas \xE0 passer la voir vers la forge si t'as le temps. "

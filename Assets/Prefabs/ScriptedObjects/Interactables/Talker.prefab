@@ -397,8 +397,11 @@ MonoBehaviour:
     flowerNeeded: 0
   _dialogueTMP: {fileID: 7182229921012765509}
   _bubbleCanvas: {fileID: 7182229920117031491}
-  _talkerId: testTalker1
+  <TalkerId>k__BackingField: 
   _pnjAnimator: {fileID: 8214054338859670825}
+  _isFriendly: 1
+  <IsFinal>k__BackingField: 0
+  gameObject: {fileID: 7182229919750216394}
 --- !u!1 &7182229920117031491
 GameObject:
   m_ObjectHideFlags: 0

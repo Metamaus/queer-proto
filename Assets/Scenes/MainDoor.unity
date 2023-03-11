@@ -4266,6 +4266,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}
+      propertyPath: _isFriendly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
       propertyPath: _dialogues.Array.size
       value: 1
       objectReference: {fileID: 0}

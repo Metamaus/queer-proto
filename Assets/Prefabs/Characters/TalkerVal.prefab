@@ -441,7 +441,7 @@ PrefabInstance:
     - target: {fileID: 7182229919750216394, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}
       propertyPath: m_Name
-      value: ValTalker
+      value: TalkerVal
       objectReference: {fileID: 0}
     - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}
@@ -452,6 +452,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _isFriendly
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
+      propertyPath: <TalkerId>k__BackingField
+      value: Val
       objectReference: {fileID: 0}
     - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}

@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using DefaultNamespace;
+using Dialogues;
 using GlobalData;
 using UnityEngine;
 
@@ -11,6 +13,7 @@ public class InitScene : MonoBehaviour
     [SerializeField] private GameObject _uiPrefab;
     [SerializeField] private Transform _playerStartPosition; // todo(change scene): change initial position depending on the previous position
     [SerializeField] private List<ChangeScene> _pathsToOtherScenes;
+    [SerializeField] private List<Talker> _talkers;
 
     private void Awake() // Todo: manage these instances with don't destroy on load
     {
@@ -45,6 +48,15 @@ public class InitScene : MonoBehaviour
         {
             canvas.worldCamera = Camera.main;
         }
+    }
 
+    private void Start()
+    {
+        var memory = GameMemory.Instance;
+        foreach (var talker in _talkers)
+        {
+            bool ShouldMove = memory.MovedCharacters.Contains(talker.TalkerId);
+            talker.gameObject.SetActive(ShouldMove == talker.IsFinal);
+        }
     }
 }

@@ -22,10 +22,12 @@ namespace Dialogues
         [SerializeField] private List<DialogueActions> _dialogues; // could work the other way around, talkers are represented by enums and given their lines ?
         [SerializeField] private TextMeshProUGUI _dialogueTMP;
         [SerializeField] private GameObject _bubbleCanvas;
-        [SerializeField] private string _talkerId;
+        [field: SerializeField] public string TalkerId { get; private set; }
         [SerializeField] private Animator _pnjAnimator;
         [SerializeField] private bool _isFriendly = true;
+        [field: SerializeField] public bool IsFinal { get; private set; }
 
+        public GameObject gameObject;
         private int _currentLine;
         private int _currentDialogue;
         private static readonly int Talk = Animator.StringToHash("Talk");
@@ -38,7 +40,7 @@ namespace Dialogues
 
         private void Start()
         {
-            _currentDialogue = GameMemory.Instance.GetTalkerMemory(_talkerId);
+            _currentDialogue = GameMemory.Instance.GetTalkerMemory(TalkerId);
         }
 
         public override bool Interact()
@@ -64,8 +66,13 @@ namespace Dialogues
                 _dialogues[_currentDialogue].building?.Build();
                 _bubbleCanvas.SetActive(false);
                 _currentDialogue++;
-                GameMemory.Instance.UpdateTalker(_talkerId, _currentDialogue); // use a setter ?
+                GameMemory.Instance.UpdateTalker(TalkerId, _currentDialogue); // use a setter ?
                 _currentLine = 0;
+
+                if (_currentDialogue >= _dialogues.Count) // The game is about to end, all characters go to the final scen
+                {
+                    GameMemory.Instance.MoveCharacter(TalkerId);
+                }
                 return true;
             }
             

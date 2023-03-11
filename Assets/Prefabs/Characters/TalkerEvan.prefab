@@ -372,6 +372,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
         type: 3}
+      propertyPath: <TalkerId>k__BackingField
+      value: Evan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182229919750216397, guid: d408cc0d11d32c44d8e7939bc9f46ff7,
+        type: 3}
       propertyPath: _dialogues.Array.data[0].data
       value: 
       objectReference: {fileID: 11400000, guid: 13bc61eaa8d857e42bddb82d7a55d8e8,

@@ -19547,6 +19547,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6320346972270423124, guid: a5f71ae357c8fa7499551b339ebc71b1,
         type: 3}
+      propertyPath: _talkers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320346972270423124, guid: a5f71ae357c8fa7499551b339ebc71b1,
+        type: 3}
+      propertyPath: _talkers.Array.data[0]
+      value: 
+      objectReference: {fileID: 3475058066624200910}
+    - target: {fileID: 6320346972270423124, guid: a5f71ae357c8fa7499551b339ebc71b1,
+        type: 3}
       propertyPath: _pathsToOtherScenes.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -19953,3 +19963,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e8e29952619984791c56d1b1fcae5f, type: 3}
+--- !u!114 &3475058066624200910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6022872810071538602, guid: 99e8e29952619984791c56d1b1fcae5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3475058066624200909}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea569035efa74b6199fc50a6887d8804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

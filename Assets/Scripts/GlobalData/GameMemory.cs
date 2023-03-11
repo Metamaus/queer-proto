@@ -70,6 +70,8 @@ namespace GlobalData
         
         public string PreviousScene { get; private set; }
 
+        public List<string> MovedCharacters;
+
         private void Awake()
         {
             if (Instance != null)
@@ -79,6 +81,7 @@ namespace GlobalData
             
             PreviousScene = string.Empty;
             Instance = this;
+            MovedCharacters = new List<string>();
         }
 
         public int GetTalkerMemory(string talkerId)
@@ -110,6 +113,11 @@ namespace GlobalData
         public void ChangeScene()
         {
             PreviousScene = SceneManager.GetActiveScene().name;
+        }
+
+        public void MoveCharacter(string characterId)
+        {
+            MovedCharacters.Add(characterId);
         }
     }
 }
